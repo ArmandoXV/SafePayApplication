@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'Constants/Routs.dart';
 import 'Constants/Theme.dart';
 
-//Test
 void main() => runApp(MainWidget());
 
 class MainWidget extends StatelessWidget {
