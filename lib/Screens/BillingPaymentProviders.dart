@@ -16,8 +16,7 @@ class _ServiceProviderWidgetState extends State<ServiceProviderWidget> {
 
   @override
   Widget build(BuildContext context) {
-    final args =
-        ModalRoute.of(context)!.settings.arguments as QrScannerhelperArgs;
+    ModalRoute.of(context)!.settings.arguments as QrScannerhelperArgs;
 
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,

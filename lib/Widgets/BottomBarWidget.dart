@@ -34,11 +34,10 @@ class BottomBarWidget extends StatelessWidget {
                 icon: Icon(Icons.credit_card_outlined),
                 color: MaterialColors.myMainColor,
                 onPressed: () {
-                  while (Navigator.canPop(context)) {
-                    Navigator.pop(context);
-                  }
-                  Navigator.pushReplacementNamed(
-                      context, "/servicesProvidersWidget");
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, "/servicesProvidersWidget", (route) {
+                    return route.isFirst;
+                  });
                 },
               ),
             ),

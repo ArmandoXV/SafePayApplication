@@ -26,12 +26,16 @@ class AccountWidget extends StatelessWidget {
         child: Column(
           children: [
             Expanded(
-              flex: 2,
+              flex: 0,
               child: Row(
                 children: [
                   // The a account Name
                   Container(
-                    margin: EdgeInsets.only(top: 10, right: 20, left: 15),
+                    margin: EdgeInsets.only(
+                      top: 30,
+                      left: 30,
+                      bottom: 30,
+                    ),
                     child: Text(
                       accountName,
                       style: TextStyle(
@@ -45,7 +49,7 @@ class AccountWidget extends StatelessWidget {
               ),
             ),
             Expanded(
-              flex: 1,
+              flex: 0,
               child: Container(
                 margin: EdgeInsets.symmetric(horizontal: 30),
                 child: Column(
@@ -66,13 +70,16 @@ class AccountWidget extends StatelessWidget {
                     ),
                     Expanded(
                       flex: 0,
-                      child: Row(
-                        children: [
-                          Text(
-                            accountNumber,
-                            style: TextStyle(fontSize: 20),
-                          ),
-                        ],
+                      child: Container(
+                        margin: EdgeInsets.all(3),
+                        child: Row(
+                          children: [
+                            Text(
+                              accountNumber,
+                              style: TextStyle(fontSize: 20),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
@@ -80,7 +87,7 @@ class AccountWidget extends StatelessWidget {
               ),
             ),
             Expanded(
-              flex: 1,
+              flex: 0,
               child: Container(
                 margin: EdgeInsets.symmetric(horizontal: 30),
                 child: Column(
@@ -101,13 +108,16 @@ class AccountWidget extends StatelessWidget {
                     ),
                     Expanded(
                       flex: 0,
-                      child: Row(
-                        children: [
-                          Text(
-                            accountNumber,
-                            style: TextStyle(fontSize: 20),
-                          ),
-                        ],
+                      child: Container(
+                        margin: EdgeInsets.all(3),
+                        child: Row(
+                          children: [
+                            Text(
+                              "\$ $balance",
+                              style: TextStyle(fontSize: 20),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],

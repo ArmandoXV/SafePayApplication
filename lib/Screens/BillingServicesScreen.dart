@@ -2,36 +2,38 @@ import 'package:ebankdemo/Constants/Theme.dart';
 import 'package:ebankdemo/Widgets/BottomBarWidget.dart';
 import 'package:ebankdemo/Widgets/Btn.dart';
 import 'package:ebankdemo/Widgets/ScreenHeaderWidget.dart';
+import 'package:ebankdemo/Widgets/drawer.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-class TransferBetweenMyAcScreen extends StatefulWidget {
+class BillingServicesScreen extends StatefulWidget {
   @override
-  _TransferBetweenMyAcScreen createState() => _TransferBetweenMyAcScreen();
+  _BillingServicesScreenState createState() => _BillingServicesScreenState();
 }
 
-class _TransferBetweenMyAcScreen extends State<TransferBetweenMyAcScreen> {
+class _BillingServicesScreenState extends State<BillingServicesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
-      appBar: AppBar(),
       backgroundColor: MaterialColors.myMainBackgroundColor,
+      extendBody: true,
+      appBar: AppBar(),
+      drawer: DrawerWidget(),
       drawerDragStartBehavior: DragStartBehavior.start,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingAction(),
-      bottomNavigationBar: BottomBarWidget(),
-      body: SingleChildScrollView(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            ScreenHeaderWidget(),
-            SizedBox(
-              height: 20,
-            ),
-            _transferBetweenMyAccountForm(),
-          ],
-        ),
+      bottomNavigationBar: new BottomBarWidget(),
+      body: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          ScreenHeaderWidget(),
+          SizedBox(
+            height: 20,
+          ),
+          SingleChildScrollView(
+            child: _transferBetweenMyAccountForm(),
+          ),
+        ],
       ),
     );
   }
@@ -167,7 +169,15 @@ class _TransferBetweenMyAcScreen extends State<TransferBetweenMyAcScreen> {
     );
   }
 
-  var currentSelectedAccount = "Saving Account";
+  var currentProvider = "BBSF";
+  var providers = [
+    "BBSF",
+    "al Baraka",
+    "Commercial Bank of Syria",
+    "Real State Bank of Syria",
+    "Syira International Islamic Bank",
+  ];
+
   var selectedToAccount = "Current Account";
   var accounts = ["Saving Account", "Current Account"];
 
@@ -183,15 +193,15 @@ class _TransferBetweenMyAcScreen extends State<TransferBetweenMyAcScreen> {
             child: DropdownButtonHideUnderline(
               child: DropdownButton<String>(
                 icon: Icon(Icons.keyboard_arrow_down_sharp),
-                value: currentSelectedAccount,
+                value: currentProvider,
                 isDense: true,
                 onChanged: (newValue) {
                   setState(() {
-                    currentSelectedAccount = newValue!;
+                    currentProvider = newValue!;
                   });
-                  print(currentSelectedAccount);
+                  print(currentProvider);
                 },
-                items: accounts.map((String value) {
+                items: providers.map((String value) {
                   return DropdownMenuItem<String>(
                     value: value,
                     child: Text(value),

@@ -33,7 +33,7 @@ class _HomeState extends State<Home> {
           children: [
             ScreenHeaderWidget(),
             Flexible(
-              flex: 5,
+              flex: 6,
               child: Container(
                 child: _accountCardSlider(),
               ),
@@ -80,7 +80,7 @@ class _HomeState extends State<Home> {
         initialPage: 2,
         enableInfiniteScroll: false,
         enlargeCenterPage: true,
-        aspectRatio: 1.4,
+        aspectRatio: 1.3,
         onPageChanged: (index, reason) {
           setState(() {
             _current = index;

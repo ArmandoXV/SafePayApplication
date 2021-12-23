@@ -1,4 +1,5 @@
 import 'package:ebankdemo/Screens/AdressesBookScreen.dart';
+import 'package:ebankdemo/Screens/BillingServicesScreen.dart';
 import 'package:ebankdemo/Screens/HomeScreen.dart';
 import 'package:ebankdemo/Screens/LoginScreen.dart';
 import 'package:ebankdemo/Screens/QRScreen.dart';
@@ -22,5 +23,6 @@ Map<String, WidgetBuilder> get route {
         new TransferBetweenMyAcScreen(),
     "/servicesProvidersWidget": (BuildContext context) =>
         new ServicesProvidersWidget(),
+    "/provider": (BuildContext context) => new BillingServicesScreen(),
   };
 }

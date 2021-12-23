@@ -2,8 +2,6 @@ import 'package:ebankdemo/Constants/Theme.dart';
 import 'package:ebankdemo/Widgets/BottomBarWidget.dart';
 import 'package:ebankdemo/Widgets/Btn.dart';
 import 'package:ebankdemo/Widgets/ScreenHeaderWidget.dart';
-import 'package:ebankdemo/Widgets/drawer.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class TransferMethodScreen extends StatefulWidget {
@@ -16,9 +14,7 @@ class _TransferMethodScreenState extends State<TransferMethodScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      drawer: DrawerWidget(),
       backgroundColor: MaterialColors.myMainBackgroundColor,
-      drawerDragStartBehavior: DragStartBehavior.start,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingAction(),
       bottomNavigationBar: new BottomBarWidget(),

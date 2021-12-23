@@ -44,11 +44,6 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
-ios/Flutter/Generated.xcconfig
-ios/Flutter/Generated.xcconfig
-ios/Flutter/flutter_export_environment.sh
-ios/Flutter/flutter_export_environment.sh
-ios/Flutter/Generated.xcconfig
 
 # run and excution related files
 .flutter-plugins-dependencies

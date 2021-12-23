@@ -28,7 +28,89 @@ class _ServicesProvidersWidgetState extends State<ServicesProvidersWidget> {
       bottomNavigationBar: new BottomBarWidget(),
       body: SingleChildScrollView(
         child: Column(
-          children: [],
+          children: [
+            ScreenHeaderWidget(),
+            Container(
+              height: 600,
+              child: GridView.count(
+                primary: false,
+                padding: const EdgeInsets.all(20),
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 10,
+                crossAxisCount: 3,
+                children: <Widget>[
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    child: IconButton(
+                      icon: Image(
+                        image: AssetImage("assets/imgs/billers/BBSFIcon.png"),
+                      ),
+                      onPressed: () {
+                        Navigator.pushNamed(context, "/provider");
+                        print("BBSF");
+                      },
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    child: IconButton(
+                      icon: Image(
+                        image:
+                            AssetImage("assets/imgs/billers/alBarakaIcon.png"),
+                      ),
+                      onPressed: () {
+                        print("BBSF");
+                      },
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    child: IconButton(
+                      icon: Image(
+                        image: AssetImage("assets/imgs/billers/CBSIcon.png"),
+                      ),
+                      onPressed: () {
+                        print("BBSF");
+                      },
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    child: IconButton(
+                      icon: Image(
+                        image: AssetImage("assets/imgs/billers/REBIcon.png"),
+                      ),
+                      onPressed: () {
+                        print("BBSF");
+                      },
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    child: IconButton(
+                      icon: Image(
+                        image: AssetImage("assets/imgs/billers/SIIBIcon.png"),
+                      ),
+                      onPressed: () {
+                        print("BBSF");
+                      },
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    child: IconButton(
+                      icon: Image(
+                        image: AssetImage("assets/imgs/billers/BBSFIcon.png"),
+                      ),
+                      onPressed: () {
+                        print("BBSF");
+                      },
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
